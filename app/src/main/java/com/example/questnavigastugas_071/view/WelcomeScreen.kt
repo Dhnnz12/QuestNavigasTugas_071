@@ -6,8 +6,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,5 +41,21 @@ fun WelcomeScreen(navController: NavHostController) {
                 modifier = Modifier.size(150.dp)
             )
 
+            Spacer(modifier = Modifier.height(16.dp))
 
+            Text("Hibrizi Fathin Dhonan", fontSize = 18.sp)
+            Text("20230140071", fontSize = 14.sp,
+                color = MaterialTheme.colorScheme.secondary)
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Button(
+                onClick = { navController.navigate("listPeserta") },
+                modifier = Modifier.fillMaxWidth(0.7f).height(50.dp)
+            ) {
+                Text("Submit")
+            }
         }
+    }
+
+}

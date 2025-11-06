@@ -27,7 +27,7 @@ import androidx.navigation.NavHostController
 import com.example.questnavigastugas_071.R
 
 @Composable
-fun TampilData(navController: NavHostController) {
+fun TampilData(navController: NavHostController, viewModel: Any) {
     val pesertaList = stringArrayResource(id = R.array.data_peserta)
     val gradient = Brush.verticalGradient(
         colors = listOf(Color(0xFF313647), Color(0xFF1A3D64))
@@ -65,7 +65,7 @@ fun TampilData(navController: NavHostController) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
-                    onClick = { navController.navigate("welcome") },
+                    onClick = { navController.navigate("WelcomeScreen") },
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
                 ) {
                     Text("Beranda")
@@ -73,7 +73,7 @@ fun TampilData(navController: NavHostController) {
                 Spacer(modifier = Modifier.height(12.dp))
 
                 Button(
-                    onClick = { navController.navigate("formulir") },
+                    onClick = { navController.navigate("Formulir") },
                     colors = ButtonDefaults.buttonColors(containerColor = Color.White),
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp)
                 ) {

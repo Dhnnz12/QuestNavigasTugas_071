@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             QuestNavigasTugas_071Theme {
-                Navigasiku()
+                DataApp()
                 }
             }
         }

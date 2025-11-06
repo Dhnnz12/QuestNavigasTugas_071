@@ -32,7 +32,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun Formulir(navController : NavHostController) {
+
+fun Formulir(navController: NavHostController, viewModel: Any) {
     var nama by remember { mutableStateOf("") }
     var jenisKelamin by remember { mutableStateOf("") }
     var status by remember { mutableStateOf("") }
